@@ -1,0 +1,14 @@
+{
+  "locked_policy": {
+    "routing_mode": "patch_priority",
+    "proposal_score_threshold": 0.5,
+    "photoshop_patch_threshold": 0.7,
+    "aigc_patch_threshold": 0.7,
+    "face_score_threshold": 1.0,
+    "max_boxes_per_image": 1,
+    "nms_iou_threshold": 0.3,
+    "sam_score_threshold": 0.9,
+    "sam_area_box_ratio_min": 0.005,
+    "sam_area_box_ratio_max": 0.5
+  }
+}

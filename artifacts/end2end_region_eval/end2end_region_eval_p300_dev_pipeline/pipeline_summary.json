@@ -1,0 +1,40 @@
+{
+  "name": "end2end_region_eval_p300_dev_pipeline",
+  "pipeline_manifest": "artifacts/end2end_region_eval/end2end_region_eval_p300_dev/pipeline_manifest.jsonl",
+  "output_jsonl": "artifacts/end2end_region_eval/end2end_region_eval_p300_dev_pipeline/pipeline_records.jsonl",
+  "n": 300,
+  "completed": 300,
+  "global_verdict_counts": {
+    "authentic": 138,
+    "tampered": 139,
+    "unknown": 23
+  },
+  "global_domain_counts": {
+    "aigc_inpaint": 50,
+    "deepfake": 60,
+    "none": 138,
+    "photoshop": 29,
+    "unknown": 23
+  },
+  "route_counts": {
+    "aigc_inpaint": 50,
+    "deepfake": 60,
+    "none": 138,
+    "photoshop": 29,
+    "unknown": 23
+  },
+  "face_fallback_count": 8,
+  "sam_candidate_count": 1779,
+  "forbidden_pipeline_keys": [
+    "gt_bbox",
+    "gt_mask",
+    "label",
+    "mask",
+    "mask_member",
+    "resolved_gt_mask",
+    "resolved_mask",
+    "tamper_domain",
+    "verdict"
+  ],
+  "boundary": "image-only pipeline cache; no GT mask/bbox fields are accepted in the input manifest"
+}
