@@ -1,0 +1,87 @@
+{
+  "name": "region_eval_p60",
+  "boundary": "bbox-prompt conditioned mask refinement / grounding evaluation; not automatic forged-region discovery",
+  "manifest": "artifacts/region_eval/region_eval_p60/manifest.jsonl",
+  "n": 60,
+  "sam_status": "run",
+  "sam_reason": null,
+  "sam_checkpoint": "weight/sam_vit_b_01ec64.pth",
+  "sam_model_type": "vit_b",
+  "sam_impl": "auto",
+  "methods": {
+    "bbox_mask_baseline": {
+      "status": "run",
+      "overall": {
+        "n": 60,
+        "iou": 0.7087392732842118,
+        "dice": 0.803127513515986,
+        "pixel_precision": 0.7087392732842118,
+        "pixel_recall": 1.0,
+        "pixel_f1": 0.803127513515986
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 20,
+          "iou": 0.5430799007444788,
+          "dice": 0.680742888319642,
+          "pixel_precision": 0.5430799007444788,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.680742888319642
+        },
+        "deepfake": {
+          "n": 20,
+          "iou": 0.9416220176508091,
+          "dice": 0.9692355052078392,
+          "pixel_precision": 0.9416220176508091,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9692355052078392
+        },
+        "photoshop": {
+          "n": 20,
+          "iou": 0.6415159014573469,
+          "dice": 0.7594041470204768,
+          "pixel_precision": 0.6415159014573469,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.7594041470204768
+        }
+      }
+    },
+    "sam_refinement": {
+      "status": "run",
+      "overall": {
+        "n": 60,
+        "iou": 0.6809475084899029,
+        "dice": 0.7829559644307357,
+        "pixel_precision": 0.8946816924553708,
+        "pixel_recall": 0.7398293678388658,
+        "pixel_f1": 0.7829559644307358
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 20,
+          "iou": 0.7285213723862215,
+          "dice": 0.833039187821359,
+          "pixel_precision": 0.8532164523574781,
+          "pixel_recall": 0.8356387219718252,
+          "pixel_f1": 0.833039187821359
+        },
+        "deepfake": {
+          "n": 20,
+          "iou": 0.5821246750052131,
+          "dice": 0.7053598186077304,
+          "pixel_precision": 0.9401942168662739,
+          "pixel_recall": 0.6080419535218672,
+          "pixel_f1": 0.7053598186077304
+        },
+        "photoshop": {
+          "n": 20,
+          "iou": 0.7321964780782739,
+          "dice": 0.8104688868631177,
+          "pixel_precision": 0.8906344081423606,
+          "pixel_recall": 0.7758074280229053,
+          "pixel_f1": 0.8104688868631177
+        }
+      }
+    }
+  }
+}

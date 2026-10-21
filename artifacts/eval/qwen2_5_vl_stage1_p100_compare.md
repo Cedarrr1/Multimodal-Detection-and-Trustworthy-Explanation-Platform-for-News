@@ -1,0 +1,112 @@
+# Qwen2.5-VL Base vs p100 LoRA Comparison
+
+## Sample 0
+
+- image: `artifacts/lora_data/stage1_mmtd_p100/images/aigc_inpaint/Au/image/000000380574.jpg`
+- reference: 1. Whether the picture has been tampered with / Description of the tampered area: The image appears to have not been tampered with. The lighting, shadows, and textures seem consistent with a scene captured directly by a camera.
+
+### Base
+
+The image appears to be authentic. There are no visible signs of manipulation such as deepfake facial boundary artifacts, AIGC inpainting texture discontinuities, or Photoshop splicing/compositing traces. The lighting, shadows, and overall composition suggest a natural scene without any obvious digital alterations.
+
+### p100 LoRA
+
+1. Whether the image has been tampered with: The image appears to be authentic and not tampered with. It presents as a photograph captured directly by a camera.
+
+2. Judgment basis: Several details support the authenticity of the image:
+- Lighting: The lighting in the image is consistent, with shadows falling naturally to the right side of objects, indicating a single light source from the left.
+- Resolution: The image resolution is uniform across the entire scene, without any areas showing signs of blurring or pixelation that would suggest manipulation.
+- Copy and Paste: There are no obvious signs of duplication or mirroring that would indicate a copy and paste operation.
+- Edges: The edges around objects like the pots and windows are smooth and show no signs of unnatural pixel distribution or jaggedness that
+
+## Sample 1
+
+- image: `artifacts/lora_data/stage1_mmtd_p100/images/aigc_inpaint/Tp/image/1295.png`
+- reference: 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with. The tampered area is located on the lower left corner of the image, extending from the bottom edge upwards and intruding into the area of the black sofa. The tampering includes part of the sofa itself and an object lying on the sofa that appears to be a magazine or book with visible text and images on the cover.
+
+### Base
+
+The image appears to be authentic. There are no evident signs of manipulation or tampering. The scene depicts a modern living room with a black sofa adorned with decorative pillows, a coffee table, and two wall-mounted televisions displaying different scenes. The lighting and overall composition suggest a real-life setting without any visible artificial alterations.
+
+### p100 LoRA
+
+1. Whether the picture has been tampered with: The image appears to be authentic and not tampered with. It seems to be a photograph taken directly by a camera.
+
+2. Judgment basis: The lighting in the room is consistent, with the light source appearing to come from above, casting shadows that align with the direction of the light. The reflections on the television screens and the lamp suggest a single light source. There are no obvious signs of duplication or mirroring that would indicate a copy and paste operation. The edges of objects, such as the couch, pillows, and furniture, appear natural with no visible pixel distortion or unnatural sharpness that would suggest compositing. The resolution across the image is uniform, without areas of differing quality that might indicate manipulation. The perspective and scale relationships within
+
+## Sample 2
+
+- image: `artifacts/lora_data/stage1_mmtd_p100/images/df/dffd/ffhq/train/image/R_FFHQ_04655.png`
+- reference: 1. Whether the image has been tampered with/description of the tampered area: The image has not been tampered with. It is a picture of a face taken directly by the camera. The syntax is unchanged and the semantics are consistent.
+
+### Base
+
+The image appears to be authentic. There are no visible signs of tampering, such as deepfake facial boundary artifacts, AIGC inpainting texture discontinuities, or Photoshop splicing/compositing traces. The image looks like a standard photograph with natural lighting and clear details.
+
+### p100 LoRA
+
+1. Whether the image has been tampered with: The image appears to be authentic and not tampered with. The visible portion of the image shows consistent lighting and shadows that correspond to a single light source, suggesting it is a real photograph.
+
+2. Judgment basis: The visible hairline and skin texture exhibit natural variations in color and texture that are typical of a real human face. There are no signs of digital manipulation such as unnatural pixel distribution, inconsistent lighting, or mismatched shadows that would indicate tampering. The edges around the visible hair and skin appear smooth and continuous without any obvious signs of clipping or distortion that would suggest compositing from different sources. The resolution across the visible area is uniform, with no areas showing signs of blurring or compression that could imply digital alteration. The perspective
+
+## Sample 5
+
+- image: `artifacts/lora_data/stage1_mmtd_p100/images/ps/CASIA2/image/Tp_S_CNN_M_N_art00048_art00048_10259.jpg`
+- reference: 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the central region where a dragon motif is present. This central tampering area shows a dragon with its body coiling, creating a circular shape, surrounded by flames and clouds, with its claws outstretched. Above the dragon, there are two smaller dragon-like creatures facing each other.
+
+### Base
+
+The image appears to be a traditional Chinese architectural element, specifically a dragon tile from the Forbidden City in Beijing. The dragon is a symbol of power and good fortune in Chinese culture, often depicted with intricate details and vibrant colors.
+
+Upon close inspection, there are no evident signs of tampering or manipulation. The dragon's scales, the floral patterns, and the overall design exhibit high fidelity and consistency typical of authentic traditional artwork. There are no visible artifacts, inconsistencies, or unnatural elements that would suggest digital alteration.
+
+If this image were to be considered for authenticity verification, it would be based on the following criteria:
+
+1. **Consistency**: The dragon's design is consistent with known traditional Chinese dragon tiles.
+2. **Color and Texture**: The colors and textures appear natural and well-matched.
+3.
+
+### p100 LoRA
+
+1. Whether the picture has been tampered with / Description of the tampered area: The picture has not been tampered with. It appears to be a genuine photograph taken directly by a camera.
+
+2. Judgment basis: 
+- Lighting: The lighting on the dragon's design is consistent, with no signs of mismatched shadows or inconsistent highlights that would suggest manipulation.
+- Copy and Paste: There are no obvious signs of duplication or mirroring in the dragon's design, which would indicate a copy and paste operation.
+- Edges: The edges around the dragon's design are smooth and continuous, without any irregular pixel distribution or jagged edges that could imply tampering.
+- Resolution: The resolution across the entire image is uniform, with no areas showing signs of blurring or compression that would suggest
+
+## Sample 8
+
+- image: `artifacts/lora_data/stage1_mmtd_p100/images/df/dffd/faceapp/train/image/F_FAP0_00082-2.png`
+- reference: 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the regions of the mouth, chin, cheeks, and nose.
+
+### Base
+
+The image appears to be authentic. There are no visible signs of tampering, such as deepfake facial boundary artifacts, AIGC inpainting texture discontinuities, or Photoshop splicing/compositing traces. The overall appearance of the image looks natural and consistent with typical human features.
+
+### p100 LoRA
+
+1. Whether the picture has been tampered with / Description of the tampered area: The picture has not been tampered with. It appears to be a genuine photograph taken directly by a camera.
+
+2. Judgment basis: 
+- Lighting: The lighting on the person's face is consistent, with natural shadows that correspond to the direction of light source, suggesting a single light source.
+- Copy and Paste: There are no obvious signs of duplication or mirroring in the visible areas of the image.
+- Edges: The edges around the person's face are smooth and continuous, without any irregular pixel distribution or unnatural sharpness that would indicate tampering.
+- Resolution: The resolution across the image is uniform, with no areas showing signs of blurring or compression that would suggest manipulation.
+- Perspective:
+
+## Sample 13
+
+- image: `artifacts/lora_data/stage1_mmtd_p100/images/aigc_inpaint/Tp/image/3468.png`
+- reference: 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, particularly in the front part of the moving boat in the lower left quadrant of the image. The tampered area includes the bow of the boat and part of the water surrounding it.
+
+### Base
+
+The image appears to be authentic. There are no evident signs of manipulation or tampering. The scene depicts a canal with boats and buildings, which looks like a typical urban waterway setting. The lighting, shadows, and reflections in the water all seem natural and consistent with real-world conditions. No specific regions show any obvious signs of digital alteration or artificial elements that would suggest forgery.
+
+### p100 LoRA
+
+1. Whether the picture has been tampered with: The image appears to be authentic and not tampered with. It seems to be a photograph taken directly by a camera.
+
+2. Judgment basis: The lighting in the image is consistent, with the sunlight reflecting off the water and buildings, creating natural shadows that align with the direction of light. There are no signs of duplication or mirroring that would suggest a copy and paste operation. The edges of objects, such as the boats and buildings, are smooth and continuous without any obvious signs of pixel distortion or unnatural sharpness that could indicate compositing. The resolution across the image is uniform, with no areas showing different levels of detail or compression artifacts that might suggest manipulation. The perspective and scale relationships within the scene are realistic; the size of the

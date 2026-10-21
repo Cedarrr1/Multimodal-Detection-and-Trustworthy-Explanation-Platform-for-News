@@ -1,0 +1,121 @@
+{
+  "n": 200,
+  "json": {
+    "valid_json": {
+      "correct": 200,
+      "total": 200,
+      "value": 1.0
+    },
+    "valid_schema": {
+      "correct": 200,
+      "total": 200,
+      "value": 1.0
+    }
+  },
+  "image_forensics": {
+    "image_verdict_accuracy": {
+      "correct": 179,
+      "total": 200,
+      "value": 0.895
+    },
+    "deepfake_recall": {
+      "correct": 94,
+      "total": 100,
+      "value": 0.94
+    },
+    "ffhq_authentic_accuracy": {
+      "correct": 85,
+      "total": 100,
+      "value": 0.85
+    }
+  },
+  "text_image_relation": {
+    "accuracy": {
+      "correct": 196,
+      "total": 200,
+      "value": 0.98
+    },
+    "consistent_accuracy": {
+      "correct": 100,
+      "total": 100,
+      "value": 1.0
+    },
+    "mismatched_accuracy": {
+      "correct": 96,
+      "total": 100,
+      "value": 0.96
+    },
+    "balanced_accuracy": {
+      "value": 0.98
+    }
+  },
+  "joint_decision": {
+    "final_news_verdict_accuracy": {
+      "correct": 188,
+      "total": 200,
+      "value": 0.94
+    },
+    "exact_core_accuracy": {
+      "correct": 178,
+      "total": 200,
+      "value": 0.89
+    },
+    "four_cell_confusion": {
+      "authentic_consistent": {
+        "authentic_consistent": 44,
+        "tampered_consistent": 6
+      },
+      "authentic_mismatched": {
+        "authentic_mismatched": 40,
+        "authentic_consistent": 1,
+        "tampered_mismatched": 8,
+        "tampered_consistent": 1
+      },
+      "tampered_consistent": {
+        "authentic_consistent": 3,
+        "tampered_consistent": 47
+      },
+      "tampered_mismatched": {
+        "tampered_mismatched": 47,
+        "authentic_consistent": 2,
+        "authentic_mismatched": 1
+      }
+    },
+    "per_cell_accuracy": {
+      "authentic_consistent": {
+        "total": 50,
+        "final_accuracy": 0.88,
+        "exact_core_accuracy": 0.88
+      },
+      "authentic_mismatched": {
+        "total": 50,
+        "final_accuracy": 0.98,
+        "exact_core_accuracy": 0.8
+      },
+      "tampered_consistent": {
+        "total": 50,
+        "final_accuracy": 0.94,
+        "exact_core_accuracy": 0.94
+      },
+      "tampered_mismatched": {
+        "total": 50,
+        "final_accuracy": 0.96,
+        "exact_core_accuracy": 0.94
+      }
+    }
+  },
+  "region_evidence": {
+    "faceapp_tampered_iou": 0.6168941638701935,
+    "faceapp_tampered_pixel_f1": 0.7380063723996774,
+    "ffhq_empty_mask_accuracy": {
+      "correct": 85,
+      "total": 100,
+      "value": 0.85
+    },
+    "ffhq_fp_mask_rate": {
+      "correct": 15,
+      "total": 100,
+      "value": 0.15
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "region_eval_p60",
+  "output_root": "artifacts/region_eval/region_eval_p60",
+  "seed": 20260705,
+  "per_domain": 20,
+  "total": 60,
+  "group_stats": {
+    "aigc_editing": {
+      "available": 1000,
+      "selected": 20
+    },
+    "deepfake": {
+      "available": 4501,
+      "selected": 20
+    },
+    "photoshop": {
+      "available": 5122,
+      "selected": 20
+    }
+  },
+  "bbox_source": "computed from GT mask",
+  "evaluation_boundary": "bbox-prompt conditioned mask refinement / grounding evaluation; not automatic forged-region discovery"
+}

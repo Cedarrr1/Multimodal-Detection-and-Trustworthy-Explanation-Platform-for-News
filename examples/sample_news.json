@@ -1,0 +1,9 @@
+{
+  "title": "Viral photo claims to show a real unmanipulated rescue scene after the city flood",
+  "body": "The article says the image is an authentic, unmanipulated photograph from the rescue site. It claims the scene shows emergency workers carrying residents through flooded streets shortly after the storm.",
+  "image": "../artifacts/lora_data/stage1_mmtd_eval_p30_json/images/ps/CASIA2/image/Tp_D_NRN_M_N_sec10115_cha00062_11533.jpg",
+  "metadata": {
+    "source": "mvp_sample",
+    "note": "Demo item for the fast-forward end-to-end fake-news pipeline."
+  }
+}

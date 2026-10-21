@@ -1,0 +1,86 @@
+{
+  "name": "region_eval_p150_gtmask_to_sam",
+  "boundary": "GT mask -> GT bbox -> SAM bbox prompt -> predicted mask; evaluates bbox-prompt mask refinement, not automatic forged-region discovery",
+  "manifest": "artifacts/region_eval/region_eval_p150/manifest.jsonl",
+  "n_samples": 150,
+  "bbox_matches_manifest": 150,
+  "sam_status": "run",
+  "sam_skip_reason": null,
+  "sam_checkpoint": "weight/sam_vit_b_01ec64.pth",
+  "sam_model_type": "vit_b",
+  "mask_threshold": 0,
+  "methods": {
+    "bbox_from_gtmask": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7234137768969933,
+        "dice": 0.8098863236082688,
+        "pixel_precision": 0.7234137768969933,
+        "pixel_recall": 1.0,
+        "pixel_f1": 0.8098863236082688
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.573481881653137,
+          "dice": 0.699128394841725,
+          "pixel_precision": 0.573481881653137,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.699128394841725
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9531839688594087,
+          "dice": 0.9754540163867783,
+          "pixel_precision": 0.9531839688594087,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9754540163867782
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.6435754801784342,
+          "dice": 0.7550765595963036,
+          "pixel_precision": 0.6435754801784342,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.7550765595963036
+        }
+      }
+    },
+    "sam_from_gtbbox": {
+      "overall": {
+        "n": 150,
+        "iou": 0.740758729005909,
+        "dice": 0.8281540150202334,
+        "pixel_precision": 0.8772541776605502,
+        "pixel_recall": 0.839073715217021,
+        "pixel_f1": 0.8281540150202334
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.6951838337732721,
+          "dice": 0.7945173606803914,
+          "pixel_precision": 0.7911681571059553,
+          "pixel_recall": 0.8614673338402963,
+          "pixel_f1": 0.7945173606803914
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.7473423053819092,
+          "dice": 0.8331390319403462,
+          "pixel_precision": 0.963156270149755,
+          "pixel_recall": 0.7715464264051686,
+          "pixel_f1": 0.8331390319403461
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.7797500478625458,
+          "dice": 0.856805652439963,
+          "pixel_precision": 0.8774381057259402,
+          "pixel_recall": 0.884207385405598,
+          "pixel_f1": 0.856805652439963
+        }
+      }
+    }
+  }
+}

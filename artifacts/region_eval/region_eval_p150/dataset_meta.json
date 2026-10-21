@@ -1,0 +1,39 @@
+{
+  "name": "region_eval_p150",
+  "output_root": "artifacts/region_eval/region_eval_p150",
+  "samples": "artifacts/region_eval/region_eval_p150/samples.jsonl",
+  "manifest": "artifacts/region_eval/region_eval_p150/manifest.jsonl",
+  "seed": 20260705,
+  "per_domain": 50,
+  "total": 150,
+  "exclude_manifests": [
+    "artifacts/lora_data/stage1_mmtd_p500_json/manifest.jsonl",
+    "artifacts/lora_data/stage1_mmtd_eval_p30_json/manifest.jsonl"
+  ],
+  "exclusion_key_count": 7792,
+  "group_stats": {
+    "aigc_editing": {
+      "available": 1000,
+      "excluded_by_manifest": 0,
+      "available_after_exclusion": 1000,
+      "selected": 50,
+      "selected_from_excluded_fallback": 0
+    },
+    "deepfake": {
+      "available": 4501,
+      "excluded_by_manifest": 0,
+      "available_after_exclusion": 4501,
+      "selected": 50,
+      "selected_from_excluded_fallback": 0
+    },
+    "photoshop": {
+      "available": 5122,
+      "excluded_by_manifest": 281,
+      "available_after_exclusion": 4841,
+      "selected": 50,
+      "selected_from_excluded_fallback": 0
+    }
+  },
+  "bbox_source": "computed from GT mask",
+  "evaluation_boundary": "bbox-prompt conditioned mask refinement / grounding evaluation; not automatic forged-region discovery"
+}

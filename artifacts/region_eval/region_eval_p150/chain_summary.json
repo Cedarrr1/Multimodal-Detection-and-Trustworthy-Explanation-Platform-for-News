@@ -1,0 +1,410 @@
+{
+  "name": "region_eval_p150",
+  "boundary": "image -> LoRA tampered/domain prediction -> GT mask-derived bbox prompt -> bbox or SAM mask refinement -> GT mask metrics; bbox prompts come from GT masks, so this is not automatic forged-region discovery",
+  "manifest": "artifacts/region_eval/region_eval_p150/manifest.jsonl",
+  "region_results": "artifacts/region_eval/region_eval_p150/results.jsonl",
+  "region_summary": "artifacts/region_eval/region_eval_p150/summary.json",
+  "domain_predictions": "artifacts/region_eval/region_eval_p150/domain_predictions.jsonl",
+  "n_manifest": 150,
+  "n_results": 150,
+  "image_level_predictions": {
+    "total": 150,
+    "found": 150,
+    "valid_json": {
+      "correct": 127,
+      "total": 150,
+      "value": 0.8466666666666667
+    },
+    "valid_schema": {
+      "correct": 127,
+      "total": 150,
+      "value": 0.8466666666666667
+    },
+    "tampered_recall": {
+      "correct": 86,
+      "total": 150,
+      "value": 0.5733333333333334
+    },
+    "domain_accuracy": {
+      "correct": 57,
+      "total": 150,
+      "value": 0.38
+    },
+    "predicted_domain_counts": {
+      "deepfake": 50,
+      "none": 64,
+      "photoshop": 13,
+      "unknown": 23
+    },
+    "selected_method_counts": {
+      "bbox_mask_baseline": 137,
+      "sam_refinement": 13
+    },
+    "by_domain": {
+      "aigc_editing": {
+        "n": 50,
+        "found": 50,
+        "valid_json": {
+          "correct": 38,
+          "total": 50,
+          "value": 0.76
+        },
+        "valid_schema": {
+          "correct": 38,
+          "total": 50,
+          "value": 0.76
+        },
+        "tampered_recall": {
+          "correct": 18,
+          "total": 50,
+          "value": 0.36
+        },
+        "domain_accuracy": {
+          "correct": 0,
+          "total": 50,
+          "value": 0.0
+        },
+        "selected_method_counts": {
+          "bbox_mask_baseline": 44,
+          "sam_refinement": 6
+        }
+      },
+      "deepfake": {
+        "n": 50,
+        "found": 50,
+        "valid_json": {
+          "correct": 50,
+          "total": 50,
+          "value": 1.0
+        },
+        "valid_schema": {
+          "correct": 50,
+          "total": 50,
+          "value": 1.0
+        },
+        "tampered_recall": {
+          "correct": 50,
+          "total": 50,
+          "value": 1.0
+        },
+        "domain_accuracy": {
+          "correct": 50,
+          "total": 50,
+          "value": 1.0
+        },
+        "selected_method_counts": {
+          "bbox_mask_baseline": 50,
+          "sam_refinement": 0
+        }
+      },
+      "photoshop": {
+        "n": 50,
+        "found": 50,
+        "valid_json": {
+          "correct": 39,
+          "total": 50,
+          "value": 0.78
+        },
+        "valid_schema": {
+          "correct": 39,
+          "total": 50,
+          "value": 0.78
+        },
+        "tampered_recall": {
+          "correct": 18,
+          "total": 50,
+          "value": 0.36
+        },
+        "domain_accuracy": {
+          "correct": 7,
+          "total": 50,
+          "value": 0.14
+        },
+        "selected_method_counts": {
+          "bbox_mask_baseline": 43,
+          "sam_refinement": 7
+        }
+      }
+    }
+  },
+  "mask_refinement_methods": {
+    "bbox_mask_baseline": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7234137768969937,
+        "dice": 0.8098863236082688,
+        "pixel_precision": 0.7234137768969937,
+        "pixel_recall": 1.0,
+        "pixel_f1": 0.8098863236082688
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.573481881653137,
+          "dice": 0.699128394841725,
+          "pixel_precision": 0.573481881653137,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.699128394841725
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9531839688594084,
+          "dice": 0.9754540163867782,
+          "pixel_precision": 0.9531839688594084,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9754540163867782
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.6435754801784342,
+          "dice": 0.7550765595963034,
+          "pixel_precision": 0.6435754801784342,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.7550765595963034
+        }
+      }
+    },
+    "sam_refinement": {
+      "overall": {
+        "n": 150,
+        "iou": 0.6655922831111951,
+        "dice": 0.7689815720006223,
+        "pixel_precision": 0.9065041236964263,
+        "pixel_recall": 0.7258483323275952,
+        "pixel_f1": 0.7689815720006224
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.652080885372724,
+          "dice": 0.7626805841353349,
+          "pixel_precision": 0.8458124892818553,
+          "pixel_recall": 0.746997244317114,
+          "pixel_f1": 0.7626805841353351
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.5669078502154958,
+          "dice": 0.6889839952175782,
+          "pixel_precision": 0.9524271604606134,
+          "pixel_recall": 0.5877448782792284,
+          "pixel_f1": 0.6889839952175782
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.7777881137453656,
+          "dice": 0.8552801366489544,
+          "pixel_precision": 0.9212727213468105,
+          "pixel_recall": 0.8428028743864432,
+          "pixel_f1": 0.8552801366489544
+        }
+      }
+    },
+    "domain_aware_oracle": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7943509893258328,
+        "dice": 0.8644715790570227,
+        "pixel_precision": 0.9067563931626915,
+        "pixel_recall": 0.8632667062345191,
+        "pixel_f1": 0.8644715790570227
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.652080885372724,
+          "dice": 0.7626805841353349,
+          "pixel_precision": 0.8458124892818553,
+          "pixel_recall": 0.746997244317114,
+          "pixel_f1": 0.7626805841353351
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9531839688594084,
+          "dice": 0.9754540163867782,
+          "pixel_precision": 0.9531839688594084,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9754540163867782
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.7777881137453656,
+          "dice": 0.8552801366489544,
+          "pixel_precision": 0.9212727213468105,
+          "pixel_recall": 0.8428028743864432,
+          "pixel_f1": 0.8552801366489544
+        }
+      }
+    },
+    "domain_aware_predicted": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7427009613796901,
+        "dice": 0.8245379940119784,
+        "pixel_precision": 0.7572820241134472,
+        "pixel_recall": 0.9832416663494657,
+        "pixel_f1": 0.8245379940119786
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.5806482622334493,
+          "dice": 0.7042075795750867,
+          "pixel_precision": 0.6074459610468417,
+          "pixel_recall": 0.967082601086107,
+          "pixel_f1": 0.7042075795750867
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9531839688594084,
+          "dice": 0.9754540163867782,
+          "pixel_precision": 0.9531839688594084,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9754540163867782
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.6942706530462115,
+          "dice": 0.7939523860740708,
+          "pixel_precision": 0.7112161424340904,
+          "pixel_recall": 0.9826423979622895,
+          "pixel_f1": 0.7939523860740708
+        }
+      }
+    }
+  },
+  "gtmask_to_sam": {
+    "output_dir": "artifacts/region_eval/region_eval_p150_gtmask_to_sam",
+    "summary": "artifacts/region_eval/region_eval_p150_gtmask_to_sam/gtmask_to_sam_summary.json",
+    "results": "artifacts/region_eval/region_eval_p150_gtmask_to_sam/gtmask_to_sam_results.jsonl",
+    "n_samples": 150,
+    "bbox_matches_manifest": 150,
+    "sam_status": "run",
+    "sam_setting": "segment-anything multimask_output=True, select highest predicted-IoU score",
+    "methods": {
+      "bbox_from_gtmask": {
+        "overall": {
+          "n": 150,
+          "iou": 0.7234137768969933,
+          "dice": 0.8098863236082688,
+          "pixel_precision": 0.7234137768969933,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.8098863236082688
+        },
+        "by_domain": {
+          "aigc_editing": {
+            "n": 50,
+            "iou": 0.573481881653137,
+            "dice": 0.699128394841725,
+            "pixel_precision": 0.573481881653137,
+            "pixel_recall": 1.0,
+            "pixel_f1": 0.699128394841725
+          },
+          "deepfake": {
+            "n": 50,
+            "iou": 0.9531839688594087,
+            "dice": 0.9754540163867783,
+            "pixel_precision": 0.9531839688594087,
+            "pixel_recall": 1.0,
+            "pixel_f1": 0.9754540163867782
+          },
+          "photoshop": {
+            "n": 50,
+            "iou": 0.6435754801784342,
+            "dice": 0.7550765595963036,
+            "pixel_precision": 0.6435754801784342,
+            "pixel_recall": 1.0,
+            "pixel_f1": 0.7550765595963036
+          }
+        }
+      },
+      "sam_from_gtbbox": {
+        "overall": {
+          "n": 150,
+          "iou": 0.740758729005909,
+          "dice": 0.8281540150202334,
+          "pixel_precision": 0.8772541776605502,
+          "pixel_recall": 0.839073715217021,
+          "pixel_f1": 0.8281540150202334
+        },
+        "by_domain": {
+          "aigc_editing": {
+            "n": 50,
+            "iou": 0.6951838337732721,
+            "dice": 0.7945173606803914,
+            "pixel_precision": 0.7911681571059553,
+            "pixel_recall": 0.8614673338402963,
+            "pixel_f1": 0.7945173606803914
+          },
+          "deepfake": {
+            "n": 50,
+            "iou": 0.7473423053819092,
+            "dice": 0.8331390319403462,
+            "pixel_precision": 0.963156270149755,
+            "pixel_recall": 0.7715464264051686,
+            "pixel_f1": 0.8331390319403461
+          },
+          "photoshop": {
+            "n": 50,
+            "iou": 0.7797500478625458,
+            "dice": 0.856805652439963,
+            "pixel_precision": 0.8774381057259402,
+            "pixel_recall": 0.884207385405598,
+            "pixel_f1": 0.856805652439963
+          }
+        }
+      },
+      "domain_aware_predicted_bestof3": {
+        "overall": {
+          "n": 150,
+          "iou": 0.7483387887043129,
+          "dice": 0.8286485325400545,
+          "pixel_precision": 0.7542921674339922,
+          "pixel_recall": 0.9914580345332988,
+          "pixel_f1": 0.8286485325400545
+        },
+        "by_domain": {
+          "aigc_editing": {
+            "n": 50,
+            "iou": 0.5953324569140037,
+            "dice": 0.7152958936164773,
+            "pixel_precision": 0.6016774049638527,
+            "pixel_recall": 0.9872468838572872,
+            "pixel_f1": 0.7152958936164773
+          },
+          "deepfake": {
+            "n": 50,
+            "iou": 0.9531839688594084,
+            "dice": 0.9754540163867782,
+            "pixel_precision": 0.9531839688594084,
+            "pixel_recall": 1.0,
+            "pixel_f1": 0.9754540163867782
+          },
+          "photoshop": {
+            "n": 50,
+            "iou": 0.6964999403395261,
+            "dice": 0.7951956876169081,
+            "pixel_precision": 0.7080151284787145,
+            "pixel_recall": 0.9871272197426095,
+            "pixel_f1": 0.7951956876169081
+          }
+        }
+      }
+    }
+  },
+  "policies": {
+    "domain_aware_oracle": {
+      "photoshop": "sam_refinement",
+      "aigc_editing": "sam_refinement",
+      "deepfake": "bbox_mask_baseline"
+    },
+    "domain_aware_predicted": {
+      "photoshop": "sam_refinement",
+      "aigc_editing": "sam_refinement",
+      "aigc_inpaint": "sam_refinement",
+      "deepfake": "bbox_mask_baseline",
+      "none": "bbox_mask_baseline",
+      "unknown": "bbox_mask_baseline"
+    }
+  }
+}

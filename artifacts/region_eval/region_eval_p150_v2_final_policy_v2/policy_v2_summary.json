@@ -1,0 +1,1155 @@
+{
+  "name": "region_eval_p150_v2_final_policy_v2",
+  "boundary": "GT bbox prompt conditioned mask refinement; not automatic forged-region discovery.",
+  "dev_results": "artifacts/region_eval/region_eval_p150/results.jsonl",
+  "eval_results": "artifacts/region_eval/region_eval_p150_v2_final/results.jsonl",
+  "dev_global_predictions": "artifacts/region_eval/region_eval_p150/domain_predictions_domain_boost_compact.jsonl",
+  "eval_global_predictions": "artifacts/region_eval/region_eval_p150_v2_final/domain_predictions_domain_boost_compact.jsonl",
+  "dev_patch_predictions": "artifacts/region_eval/region_eval_p150/photoshop_patch_predictions_full96_s125.jsonl",
+  "eval_patch_predictions": "artifacts/region_eval/region_eval_p150_v2_final/photoshop_patch_predictions_full96_s125.jsonl",
+  "threshold_source": "loaded",
+  "threshold_search": null,
+  "locked_thresholds": {
+    "t_ps": 0.34,
+    "t_face": 1.0,
+    "t_sam_score": 0.5,
+    "sam_area_bbox_ratio_min": 0.2,
+    "sam_area_bbox_ratio_max": 1.0
+  },
+  "dev_methods": {
+    "bbox_mask_baseline": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7234137768969937,
+        "dice": 0.8098863236082688,
+        "pixel_precision": 0.7234137768969937,
+        "pixel_recall": 1.0,
+        "pixel_f1": 0.8098863236082688,
+        "selected_method_counts": {
+          "bbox_mask_baseline": 150
+        },
+        "route_reason_counts": {},
+        "routed_domain_counts": {}
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.573481881653137,
+          "dice": 0.699128394841725,
+          "pixel_precision": 0.573481881653137,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.699128394841725,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {}
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9531839688594084,
+          "dice": 0.9754540163867782,
+          "pixel_precision": 0.9531839688594084,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9754540163867782,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {}
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.6435754801784342,
+          "dice": 0.7550765595963034,
+          "pixel_precision": 0.6435754801784342,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.7550765595963034,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {}
+        }
+      }
+    },
+    "sam_best_of3": {
+      "overall": {
+        "n": 150,
+        "iou": 0.6655922831111951,
+        "dice": 0.7689815720006223,
+        "pixel_precision": 0.9065041236964263,
+        "pixel_recall": 0.7258483323275952,
+        "pixel_f1": 0.7689815720006224,
+        "selected_method_counts": {
+          "sam_refinement": 150
+        },
+        "route_reason_counts": {},
+        "routed_domain_counts": {}
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.652080885372724,
+          "dice": 0.7626805841353349,
+          "pixel_precision": 0.8458124892818553,
+          "pixel_recall": 0.746997244317114,
+          "pixel_f1": 0.7626805841353351,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {}
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.5669078502154958,
+          "dice": 0.6889839952175782,
+          "pixel_precision": 0.9524271604606134,
+          "pixel_recall": 0.5877448782792284,
+          "pixel_f1": 0.6889839952175782,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {}
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.7777881137453656,
+          "dice": 0.8552801366489544,
+          "pixel_precision": 0.9212727213468105,
+          "pixel_recall": 0.8428028743864432,
+          "pixel_f1": 0.8552801366489544,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {}
+        }
+      }
+    },
+    "old_domain_aware_predicted": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7584356729758185,
+        "dice": 0.8361514523887812,
+        "pixel_precision": 0.8491489998545455,
+        "pixel_recall": 0.8873243590733957,
+        "pixel_f1": 0.8361514523887812,
+        "selected_method_counts": {
+          "bbox_mask_baseline": 78,
+          "sam_refinement": 72
+        },
+        "route_reason_counts": {
+          "old_global_domain_policy": 150
+        },
+        "routed_domain_counts": {
+          "aigc_inpaint": 50,
+          "deepfake": 49,
+          "none": 29,
+          "photoshop": 22
+        }
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.652080885372724,
+          "dice": 0.7626805841353349,
+          "pixel_precision": 0.8458124892818553,
+          "pixel_recall": 0.746997244317114,
+          "pixel_f1": 0.7626805841353351,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {
+            "old_global_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "aigc_inpaint": 50
+          }
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9531839688594084,
+          "dice": 0.9754540163867782,
+          "pixel_precision": 0.9531839688594084,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9754540163867782,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {
+            "old_global_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "deepfake": 49,
+            "none": 1
+          }
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.6700421646953226,
+          "dice": 0.7703197566442302,
+          "pixel_precision": 0.7484505414223724,
+          "pixel_recall": 0.9149758329030727,
+          "pixel_f1": 0.7703197566442302,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 28,
+            "sam_refinement": 22
+          },
+          "route_reason_counts": {
+            "old_global_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "none": 28,
+            "photoshop": 22
+          }
+        }
+      }
+    },
+    "oracle_domain_aware": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7943509893258328,
+        "dice": 0.8644715790570227,
+        "pixel_precision": 0.9067563931626915,
+        "pixel_recall": 0.8632667062345191,
+        "pixel_f1": 0.8644715790570227,
+        "selected_method_counts": {
+          "bbox_mask_baseline": 50,
+          "sam_refinement": 100
+        },
+        "route_reason_counts": {
+          "oracle_domain_policy": 150
+        },
+        "routed_domain_counts": {
+          "aigc_editing": 50,
+          "deepfake": 50,
+          "photoshop": 50
+        }
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.652080885372724,
+          "dice": 0.7626805841353349,
+          "pixel_precision": 0.8458124892818553,
+          "pixel_recall": 0.746997244317114,
+          "pixel_f1": 0.7626805841353351,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {
+            "oracle_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "aigc_editing": 50
+          }
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9531839688594084,
+          "dice": 0.9754540163867782,
+          "pixel_precision": 0.9531839688594084,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9754540163867782,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {
+            "oracle_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "deepfake": 50
+          }
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.7777881137453656,
+          "dice": 0.8552801366489544,
+          "pixel_precision": 0.9212727213468105,
+          "pixel_recall": 0.8428028743864432,
+          "pixel_f1": 0.8552801366489544,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {
+            "oracle_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "photoshop": 50
+          }
+        }
+      }
+    },
+    "policy_v2": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7774183726375093,
+        "dice": 0.8513603896446116,
+        "pixel_precision": 0.8655018552964897,
+        "pixel_recall": 0.8913611982297952,
+        "pixel_f1": 0.8513603896446116,
+        "selected_method_counts": {
+          "bbox_mask_baseline": 71,
+          "sam_refinement": 79
+        },
+        "route_reason_counts": {
+          "aigc_sam_area_ratio_too_small": 4,
+          "aigc_sam_gate_pass": 18,
+          "face_score_pass": 49,
+          "fallback_bbox": 18,
+          "photoshop_patch_score_pass": 61
+        },
+        "routed_domain_counts": {
+          "aigc_inpaint": 22,
+          "deepfake": 49,
+          "none": 15,
+          "photoshop": 64
+        }
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.661940189308059,
+          "dice": 0.7709008085702598,
+          "pixel_precision": 0.815532108166057,
+          "pixel_recall": 0.794264837743423,
+          "pixel_f1": 0.77090080857026,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 4,
+            "sam_refinement": 46
+          },
+          "route_reason_counts": {
+            "aigc_sam_area_ratio_too_small": 4,
+            "aigc_sam_gate_pass": 18,
+            "photoshop_patch_score_pass": 28
+          },
+          "routed_domain_counts": {
+            "aigc_inpaint": 22,
+            "photoshop": 28
+          }
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9531839688594084,
+          "dice": 0.9754540163867782,
+          "pixel_precision": 0.9531839688594084,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9754540163867782,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {
+            "face_score_pass": 49,
+            "fallback_bbox": 1
+          },
+          "routed_domain_counts": {
+            "deepfake": 49,
+            "none": 1
+          }
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.7171309597450605,
+          "dice": 0.8077263439767967,
+          "pixel_precision": 0.8277894888640036,
+          "pixel_recall": 0.8798187569459625,
+          "pixel_f1": 0.8077263439767967,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 17,
+            "sam_refinement": 33
+          },
+          "route_reason_counts": {
+            "fallback_bbox": 17,
+            "photoshop_patch_score_pass": 33
+          },
+          "routed_domain_counts": {
+            "none": 14,
+            "photoshop": 36
+          }
+        }
+      }
+    }
+  },
+  "eval_methods": {
+    "bbox_mask_baseline": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7264161581055597,
+        "dice": 0.8171923015971702,
+        "pixel_precision": 0.7264161581055597,
+        "pixel_recall": 1.0,
+        "pixel_f1": 0.81719230159717,
+        "selected_method_counts": {
+          "bbox_mask_baseline": 150
+        },
+        "route_reason_counts": {},
+        "routed_domain_counts": {},
+        "iou_ci95": {
+          "low": 0.6877849238027441,
+          "high": 0.7633899250335926
+        },
+        "dice_ci95": {
+          "low": 0.7870672711067346,
+          "high": 0.8438596737353511
+        },
+        "pixel_precision_ci95": {
+          "low": 0.6862336334840617,
+          "high": 0.7595607184869473
+        },
+        "pixel_recall_ci95": {
+          "low": 1.0,
+          "high": 1.0
+        },
+        "pixel_f1_ci95": {
+          "low": 0.7886956806803718,
+          "high": 0.8459466937555611
+        }
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.5922193667574838,
+          "dice": 0.7230254791642626,
+          "pixel_precision": 0.5922193667574838,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.7230254791642626,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {},
+          "iou_ci95": {
+            "low": 0.5370857745984391,
+            "high": 0.6409049040183369
+          },
+          "dice_ci95": {
+            "low": 0.6729280883684757,
+            "high": 0.7688776696920157
+          },
+          "pixel_precision_ci95": {
+            "low": 0.5293993456827394,
+            "high": 0.6472613679423417
+          },
+          "pixel_recall_ci95": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "pixel_f1_ci95": {
+            "low": 0.6756089101453623,
+            "high": 0.7671941292680486
+          }
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9455683940895514,
+          "dice": 0.9688230157842928,
+          "pixel_precision": 0.9455683940895514,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9688230157842928,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {},
+          "iou_ci95": {
+            "low": 0.9149658281227283,
+            "high": 0.9666735271417545
+          },
+          "dice_ci95": {
+            "low": 0.9477664605376421,
+            "high": 0.9825538587713878
+          },
+          "pixel_precision_ci95": {
+            "low": 0.914794017964005,
+            "high": 0.9664652520665313
+          },
+          "pixel_recall_ci95": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "pixel_f1_ci95": {
+            "low": 0.947311687594323,
+            "high": 0.9827424450621295
+          }
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.6414607134696432,
+          "dice": 0.759728409842955,
+          "pixel_precision": 0.6414607134696432,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.759728409842955,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {},
+          "iou_ci95": {
+            "low": 0.583605016632594,
+            "high": 0.6961521585510043
+          },
+          "dice_ci95": {
+            "low": 0.7092654391340109,
+            "high": 0.8047214341039087
+          },
+          "pixel_precision_ci95": {
+            "low": 0.5834297511382367,
+            "high": 0.6969132311768663
+          },
+          "pixel_recall_ci95": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "pixel_f1_ci95": {
+            "low": 0.7113064384225081,
+            "high": 0.8062434894575687
+          }
+        }
+      }
+    },
+    "sam_best_of3": {
+      "overall": {
+        "n": 150,
+        "iou": 0.7831064527292056,
+        "dice": 0.8610829801632375,
+        "pixel_precision": 0.9153426061567289,
+        "pixel_recall": 0.8426249800622204,
+        "pixel_f1": 0.8610829801632375,
+        "selected_method_counts": {
+          "sam_refinement": 150
+        },
+        "route_reason_counts": {},
+        "routed_domain_counts": {},
+        "iou_ci95": {
+          "low": 0.7518874169361511,
+          "high": 0.8131716396780374
+        },
+        "dice_ci95": {
+          "low": 0.8297475750652047,
+          "high": 0.8860538836137827
+        },
+        "pixel_precision_ci95": {
+          "low": 0.8893465840412336,
+          "high": 0.9383412282451684
+        },
+        "pixel_recall_ci95": {
+          "low": 0.8127660404114412,
+          "high": 0.8700671053544509
+        },
+        "pixel_f1_ci95": {
+          "low": 0.834999716426469,
+          "high": 0.8856898989958648
+        }
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.7341406594579873,
+          "dice": 0.8283152855498368,
+          "pixel_precision": 0.8343551978503091,
+          "pixel_recall": 0.8496601552335111,
+          "pixel_f1": 0.8283152855498368,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {},
+          "iou_ci95": {
+            "low": 0.6770536086071259,
+            "high": 0.7847702676472055
+          },
+          "dice_ci95": {
+            "low": 0.7778126977619868,
+            "high": 0.8690429514279113
+          },
+          "pixel_precision_ci95": {
+            "low": 0.7704039433716008,
+            "high": 0.8854723827268697
+          },
+          "pixel_recall_ci95": {
+            "low": 0.7987825881428052,
+            "high": 0.8961708373814582
+          },
+          "pixel_f1_ci95": {
+            "low": 0.7759655627383698,
+            "high": 0.873173586893399
+          }
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.7558265448680394,
+          "dice": 0.8369494265555306,
+          "pixel_precision": 0.9495908085700903,
+          "pixel_recall": 0.7844784773485408,
+          "pixel_f1": 0.8369494265555306,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {},
+          "iou_ci95": {
+            "low": 0.6904798088329781,
+            "high": 0.811327040185727
+          },
+          "dice_ci95": {
+            "low": 0.7813168382745798,
+            "high": 0.8854577493030296
+          },
+          "pixel_precision_ci95": {
+            "low": 0.9173374151939505,
+            "high": 0.9739054686981694
+          },
+          "pixel_recall_ci95": {
+            "low": 0.7220618502823192,
+            "high": 0.8384022665086032
+          },
+          "pixel_f1_ci95": {
+            "low": 0.7776604001407625,
+            "high": 0.8881697420304643
+          }
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.85935215386159,
+          "dice": 0.9179842283843456,
+          "pixel_precision": 0.9620818120497878,
+          "pixel_recall": 0.8937363076046091,
+          "pixel_f1": 0.9179842283843456,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {},
+          "routed_domain_counts": {},
+          "iou_ci95": {
+            "low": 0.8194287316110838,
+            "high": 0.8935774975469701
+          },
+          "dice_ci95": {
+            "low": 0.8923716936047037,
+            "high": 0.9427465502775344
+          },
+          "pixel_precision_ci95": {
+            "low": 0.9349060371894145,
+            "high": 0.9850647845362007
+          },
+          "pixel_recall_ci95": {
+            "low": 0.8614550137222303,
+            "high": 0.92054886870083
+          },
+          "pixel_f1_ci95": {
+            "low": 0.8909449869356899,
+            "high": 0.9406237505064439
+          }
+        }
+      }
+    },
+    "old_domain_aware_predicted": {
+      "overall": {
+        "n": 150,
+        "iou": 0.8102780072502518,
+        "dice": 0.8797502757233469,
+        "pixel_precision": 0.8549734313269277,
+        "pixel_recall": 0.9380999923129999,
+        "pixel_f1": 0.8797502757233469,
+        "selected_method_counts": {
+          "bbox_mask_baseline": 80,
+          "sam_refinement": 70
+        },
+        "route_reason_counts": {
+          "old_global_domain_policy": 150
+        },
+        "routed_domain_counts": {
+          "aigc_inpaint": 50,
+          "deepfake": 48,
+          "none": 32,
+          "photoshop": 20
+        },
+        "iou_ci95": {
+          "low": 0.7791786149669453,
+          "high": 0.839078498004095
+        },
+        "dice_ci95": {
+          "low": 0.8539615048867878,
+          "high": 0.9032385706232253
+        },
+        "pixel_precision_ci95": {
+          "low": 0.8238636825283806,
+          "high": 0.8852586043050433
+        },
+        "pixel_recall_ci95": {
+          "low": 0.9144313692136905,
+          "high": 0.9560734371498273
+        },
+        "pixel_f1_ci95": {
+          "low": 0.8562709274190446,
+          "high": 0.9020725010491724
+        }
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.7341406594579873,
+          "dice": 0.8283152855498368,
+          "pixel_precision": 0.8343551978503091,
+          "pixel_recall": 0.8496601552335111,
+          "pixel_f1": 0.8283152855498368,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {
+            "old_global_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "aigc_inpaint": 50
+          },
+          "iou_ci95": {
+            "low": 0.6759226845491572,
+            "high": 0.782163749605757
+          },
+          "dice_ci95": {
+            "low": 0.7798124842030993,
+            "high": 0.8682365565344686
+          },
+          "pixel_precision_ci95": {
+            "low": 0.7767530501793353,
+            "high": 0.8819534330106861
+          },
+          "pixel_recall_ci95": {
+            "low": 0.7908830825534571,
+            "high": 0.8953263144271014
+          },
+          "pixel_f1_ci95": {
+            "low": 0.778989643210929,
+            "high": 0.8735368733226647
+          }
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9455683940895514,
+          "dice": 0.9688230157842928,
+          "pixel_precision": 0.9455683940895514,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9688230157842928,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {
+            "old_global_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "deepfake": 48,
+            "none": 2
+          },
+          "iou_ci95": {
+            "low": 0.9173854878580775,
+            "high": 0.9665005984273108
+          },
+          "dice_ci95": {
+            "low": 0.9480385896422784,
+            "high": 0.9825097449393552
+          },
+          "pixel_precision_ci95": {
+            "low": 0.9159736468272169,
+            "high": 0.967452713056901
+          },
+          "pixel_recall_ci95": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "pixel_f1_ci95": {
+            "low": 0.9455332430897321,
+            "high": 0.9826067924843757
+          }
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.7511249682032163,
+          "dice": 0.8421125258359115,
+          "pixel_precision": 0.784996702040923,
+          "pixel_recall": 0.9646398217054889,
+          "pixel_f1": 0.8421125258359115,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 30,
+            "sam_refinement": 20
+          },
+          "route_reason_counts": {
+            "old_global_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "none": 30,
+            "photoshop": 20
+          },
+          "iou_ci95": {
+            "low": 0.6975303746141286,
+            "high": 0.8017813857424371
+          },
+          "dice_ci95": {
+            "low": 0.8025213814813457,
+            "high": 0.8816494871315536
+          },
+          "pixel_precision_ci95": {
+            "low": 0.7206176341433467,
+            "high": 0.8414692851592609
+          },
+          "pixel_recall_ci95": {
+            "low": 0.9471529098477534,
+            "high": 0.9804237285456786
+          },
+          "pixel_f1_ci95": {
+            "low": 0.8030361029035553,
+            "high": 0.8821905589024027
+          }
+        }
+      }
+    },
+    "oracle_domain_aware": {
+      "overall": {
+        "n": 150,
+        "iou": 0.8463537358030429,
+        "dice": 0.9050408432394916,
+        "pixel_precision": 0.9140018013298824,
+        "pixel_recall": 0.9144654876127069,
+        "pixel_f1": 0.9050408432394914,
+        "selected_method_counts": {
+          "bbox_mask_baseline": 50,
+          "sam_refinement": 100
+        },
+        "route_reason_counts": {
+          "oracle_domain_policy": 150
+        },
+        "routed_domain_counts": {
+          "aigc_editing": 50,
+          "deepfake": 50,
+          "photoshop": 50
+        },
+        "iou_ci95": {
+          "low": 0.8168148513925022,
+          "high": 0.8726251581642726
+        },
+        "dice_ci95": {
+          "low": 0.884177836069225,
+          "high": 0.9235335215836575
+        },
+        "pixel_precision_ci95": {
+          "low": 0.8894819073533896,
+          "high": 0.9362376861137415
+        },
+        "pixel_recall_ci95": {
+          "low": 0.8909475166901615,
+          "high": 0.934469002369075
+        },
+        "pixel_f1_ci95": {
+          "low": 0.8831348850158904,
+          "high": 0.9243929032976608
+        }
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.7341406594579873,
+          "dice": 0.8283152855498368,
+          "pixel_precision": 0.8343551978503091,
+          "pixel_recall": 0.8496601552335111,
+          "pixel_f1": 0.8283152855498368,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {
+            "oracle_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "aigc_editing": 50
+          },
+          "iou_ci95": {
+            "low": 0.6799878975065661,
+            "high": 0.783614223283443
+          },
+          "dice_ci95": {
+            "low": 0.7794793942067589,
+            "high": 0.8693282108498387
+          },
+          "pixel_precision_ci95": {
+            "low": 0.7770574574280613,
+            "high": 0.8837834864604676
+          },
+          "pixel_recall_ci95": {
+            "low": 0.7970699787117826,
+            "high": 0.8964522765925228
+          },
+          "pixel_f1_ci95": {
+            "low": 0.7804993336941698,
+            "high": 0.8732199325746334
+          }
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9455683940895514,
+          "dice": 0.9688230157842928,
+          "pixel_precision": 0.9455683940895514,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9688230157842928,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {
+            "oracle_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "deepfake": 50
+          },
+          "iou_ci95": {
+            "low": 0.9139714320868896,
+            "high": 0.9662771109942845
+          },
+          "dice_ci95": {
+            "low": 0.9477439653293035,
+            "high": 0.9827015524667427
+          },
+          "pixel_precision_ci95": {
+            "low": 0.9141589020257044,
+            "high": 0.9676426438183019
+          },
+          "pixel_recall_ci95": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "pixel_f1_ci95": {
+            "low": 0.948800513144687,
+            "high": 0.9827024945866988
+          }
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.85935215386159,
+          "dice": 0.9179842283843456,
+          "pixel_precision": 0.9620818120497878,
+          "pixel_recall": 0.8937363076046091,
+          "pixel_f1": 0.9179842283843456,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {
+            "oracle_domain_policy": 50
+          },
+          "routed_domain_counts": {
+            "photoshop": 50
+          },
+          "iou_ci95": {
+            "low": 0.8190124161278305,
+            "high": 0.8932622530817685
+          },
+          "dice_ci95": {
+            "low": 0.8901596259143674,
+            "high": 0.9410029423049302
+          },
+          "pixel_precision_ci95": {
+            "low": 0.9330693420715859,
+            "high": 0.9848045909879847
+          },
+          "pixel_recall_ci95": {
+            "low": 0.8580407967877002,
+            "high": 0.9221511491376997
+          },
+          "pixel_f1_ci95": {
+            "low": 0.8903844619928561,
+            "high": 0.9428513736346609
+          }
+        }
+      }
+    },
+    "policy_v2": {
+      "overall": {
+        "n": 150,
+        "iou": 0.8394386534989791,
+        "dice": 0.9005327196650463,
+        "pixel_precision": 0.8946261511432377,
+        "pixel_recall": 0.9275517302874455,
+        "pixel_f1": 0.9005327196650461,
+        "selected_method_counts": {
+          "bbox_mask_baseline": 66,
+          "sam_refinement": 84
+        },
+        "route_reason_counts": {
+          "aigc_sam_gate_pass": 26,
+          "face_score_pass": 48,
+          "fallback_bbox": 18,
+          "photoshop_patch_score_pass": 58
+        },
+        "routed_domain_counts": {
+          "aigc_inpaint": 26,
+          "deepfake": 48,
+          "none": 15,
+          "photoshop": 61
+        },
+        "iou_ci95": {
+          "low": 0.8113825122790598,
+          "high": 0.8674354130400803
+        },
+        "dice_ci95": {
+          "low": 0.8790206978360091,
+          "high": 0.9204917864571871
+        },
+        "pixel_precision_ci95": {
+          "low": 0.8662676686519546,
+          "high": 0.9185100104183609
+        },
+        "pixel_recall_ci95": {
+          "low": 0.9047953058290202,
+          "high": 0.9462420682607495
+        },
+        "pixel_f1_ci95": {
+          "low": 0.876786295764368,
+          "high": 0.9218672303630109
+        }
+      },
+      "by_domain": {
+        "aigc_editing": {
+          "n": 50,
+          "iou": 0.7341406594579873,
+          "dice": 0.8283152855498368,
+          "pixel_precision": 0.8343551978503091,
+          "pixel_recall": 0.8496601552335111,
+          "pixel_f1": 0.8283152855498368,
+          "selected_method_counts": {
+            "sam_refinement": 50
+          },
+          "route_reason_counts": {
+            "aigc_sam_gate_pass": 26,
+            "photoshop_patch_score_pass": 24
+          },
+          "routed_domain_counts": {
+            "aigc_inpaint": 26,
+            "photoshop": 24
+          },
+          "iou_ci95": {
+            "low": 0.6741688485785444,
+            "high": 0.7848204854677898
+          },
+          "dice_ci95": {
+            "low": 0.7762196825982599,
+            "high": 0.868842284770929
+          },
+          "pixel_precision_ci95": {
+            "low": 0.7823835004747332,
+            "high": 0.8853550240901613
+          },
+          "pixel_recall_ci95": {
+            "low": 0.7937829473413532,
+            "high": 0.8933587241412075
+          },
+          "pixel_f1_ci95": {
+            "low": 0.7770172183048111,
+            "high": 0.8701986204332673
+          }
+        },
+        "deepfake": {
+          "n": 50,
+          "iou": 0.9455683940895514,
+          "dice": 0.9688230157842928,
+          "pixel_precision": 0.9455683940895514,
+          "pixel_recall": 1.0,
+          "pixel_f1": 0.9688230157842928,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 50
+          },
+          "route_reason_counts": {
+            "face_score_pass": 48,
+            "fallback_bbox": 2
+          },
+          "routed_domain_counts": {
+            "deepfake": 48,
+            "none": 2
+          },
+          "iou_ci95": {
+            "low": 0.9176476773190458,
+            "high": 0.9668489166787846
+          },
+          "dice_ci95": {
+            "low": 0.9490271411467662,
+            "high": 0.9821245151671332
+          },
+          "pixel_precision_ci95": {
+            "low": 0.9164787865907544,
+            "high": 0.9662538450352904
+          },
+          "pixel_recall_ci95": {
+            "low": 1.0,
+            "high": 1.0
+          },
+          "pixel_f1_ci95": {
+            "low": 0.9474312636517002,
+            "high": 0.9827990759044322
+          }
+        },
+        "photoshop": {
+          "n": 50,
+          "iou": 0.8386069069493984,
+          "dice": 0.9044598576610093,
+          "pixel_precision": 0.9039548614898526,
+          "pixel_recall": 0.9329950356288254,
+          "pixel_f1": 0.9044598576610093,
+          "selected_method_counts": {
+            "bbox_mask_baseline": 16,
+            "sam_refinement": 34
+          },
+          "route_reason_counts": {
+            "fallback_bbox": 16,
+            "photoshop_patch_score_pass": 34
+          },
+          "routed_domain_counts": {
+            "none": 13,
+            "photoshop": 37
+          },
+          "iou_ci95": {
+            "low": 0.7972112469320173,
+            "high": 0.8735944664166807
+          },
+          "dice_ci95": {
+            "low": 0.8736257227670494,
+            "high": 0.9309456201195563
+          },
+          "pixel_precision_ci95": {
+            "low": 0.8569502312399309,
+            "high": 0.9438004701979353
+          },
+          "pixel_recall_ci95": {
+            "low": 0.9081437350877601,
+            "high": 0.9547175013384009
+          },
+          "pixel_f1_ci95": {
+            "low": 0.8737365986244906,
+            "high": 0.9299047856999039
+          }
+        }
+      }
+    }
+  },
+  "eval_prediction_stats": {
+    "n": 150,
+    "global_domain_accuracy": 0.7866666666666666,
+    "global_domain_counts": {
+      "aigc_inpaint": 50,
+      "deepfake": 48,
+      "none": 32,
+      "photoshop": 20
+    },
+    "mean_photoshop_patch_score_by_domain": {
+      "aigc_editing": 0.48,
+      "deepfake": 0.0,
+      "photoshop": 0.68
+    },
+    "nonzero_patch_score_counts_by_domain": {
+      "aigc_editing": 24,
+      "deepfake": 0,
+      "photoshop": 34
+    }
+  },
+  "eval_gains": {
+    "iou_abs_gain_vs_bbox": 0.11302249539341935,
+    "pixel_f1_abs_gain_vs_bbox": 0.08334041806787607
+  },
+  "bootstrap_samples": 1000
+}

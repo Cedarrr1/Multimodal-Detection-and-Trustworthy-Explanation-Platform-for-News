@@ -1,0 +1,212 @@
+{
+  "stage1_mmtd_demo": {
+    "file_name": "../../artifacts/lora_data/stage1_mmtd_demo/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage1_mmtd_p100": {
+    "file_name": "../../artifacts/lora_data/stage1_mmtd_p100/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage1_mmtd_p100_json": {
+    "file_name": "../../artifacts/lora_data/stage1_mmtd_p100_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage1_mmtd_p500_json": {
+    "file_name": "../../artifacts/lora_data/stage1_mmtd_p500_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage1_photoshop_crop_json": {
+    "file_name": "../../artifacts/lora_data/stage1_photoshop_crop_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage1_domain_boost_json": {
+    "file_name": "../../artifacts/lora_data/stage1_domain_boost_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "end2end_region_proposal_json": {
+    "file_name": "../../artifacts/lora_data/end2end_region_proposal_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "end2end_region_proposal_sliding_json": {
+    "file_name": "../../artifacts/lora_data/end2end_region_proposal_sliding_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage2_claim_image_json": {
+    "file_name": "../../artifacts/lora_data/stage2_claim_image_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage2_claim_image_bootstrap_json": {
+    "file_name": "../../artifacts/lora_data/stage2_claim_image_bootstrap_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage2_deepfake_news_json": {
+    "file_name": "../../artifacts/lora_data/stage2_deepfake_news_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage2_deepfake_news_mixed_json": {
+    "file_name": "../../artifacts/lora_data/stage2_deepfake_news_mixed_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage2_deepfake_news_v2_json": {
+    "file_name": "../../artifacts/lora_data/stage2_deepfake_news_v2_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage2_deepfake_news_v2_mixed_json": {
+    "file_name": "../../artifacts/lora_data/stage2_deepfake_news_v2_mixed_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "stage2_relation_v3_claim_json": {
+    "file_name": "../../artifacts/lora_data/stage2_relation_v3_json/llamafactory_qwen_vl_sft.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  }
+}

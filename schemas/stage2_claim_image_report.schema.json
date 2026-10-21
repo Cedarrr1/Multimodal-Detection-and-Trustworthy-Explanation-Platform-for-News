@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage2ClaimImageReport",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim",
+    "verdict",
+    "visual_forensics",
+    "claim_image_consistency",
+    "final_reason"
+  ],
+  "properties": {
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verdict": {
+      "type": "string",
+      "enum": ["authentic", "tampered", "misleading", "unknown"]
+    },
+    "visual_forensics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["image_verdict", "tampered_region", "tamper_domain", "evidence"],
+      "properties": {
+        "image_verdict": {
+          "type": "string",
+          "enum": ["authentic", "tampered", "unknown"]
+        },
+        "tampered_region": {
+          "type": "string"
+        },
+        "tamper_domain": {
+          "type": "string",
+          "enum": ["photoshop", "deepfake", "aigc_inpaint", "none", "unknown"]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maxItems": 5
+        }
+      }
+    },
+    "claim_image_consistency": {
+      "type": "string",
+      "enum": ["supports", "contradicts", "unrelated", "insufficient"]
+    },
+    "final_reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
