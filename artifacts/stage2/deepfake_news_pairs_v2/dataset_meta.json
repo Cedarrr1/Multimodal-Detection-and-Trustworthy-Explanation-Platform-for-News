@@ -1,0 +1,95 @@
+{
+  "name": "deepfake_news_pairs_v2",
+  "caption_source": "artifacts/stage2/deepfake_news_caption_pool/captions.jsonl",
+  "seed": 20260719,
+  "min_mismatch_score": 2,
+  "forbidden_terms": [
+    "authentic",
+    "deepfake",
+    "faceapp",
+    "fake",
+    "ffhq",
+    "forensic",
+    "forged",
+    "manipulated",
+    "real",
+    "tamper"
+  ],
+  "prompt_template": "<image>\nTitle: {title}\nBody: {body}\n\nDetermine whether the image is digitally manipulated and whether the title and body match the visible image. This is a controlled text-image consistency benchmark, not real-world news fact checking. Return only valid compact JSON with exactly these keys: image_verdict, tamper_domain, text_image_relation, final_news_verdict, forensic_region, and evidence. Do not output labels outside the listed enum values. Use image_verdict \"authentic\" or \"tampered\"; tamper_domain \"none\" or \"deepfake\"; text_image_relation \"consistent\" or \"mismatched\"; final_news_verdict \"credible\" or \"fake_news\"; forensic_region \"face\" or \"none\".",
+  "splits": {
+    "train": {
+      "raw_path": "artifacts/stage2/deepfake_news_pairs_v2/train_raw.jsonl",
+      "records": 800,
+      "per_cell": 200,
+      "cell_counts": {
+        "authentic_mismatched": 200,
+        "tampered_mismatched": 200,
+        "authentic_consistent": 200,
+        "tampered_consistent": 200
+      },
+      "unique_target_images": 400,
+      "mismatch_score_min": 4,
+      "mismatch_score_mean": 6.83,
+      "mismatch_score_histogram": {
+        "('mismatch_score', 4)": 9,
+        "('mismatch_score', 5)": 59,
+        "('mismatch_score', 6)": 119,
+        "('mismatch_score', 7)": 78,
+        "('mismatch_score', 8)": 96,
+        "('mismatch_score', 9)": 18,
+        "('mismatch_score', 10)": 20,
+        "('mismatch_score', 11)": 1
+      },
+      "mismatch_fallback_counts": {}
+    },
+    "dev": {
+      "raw_path": "artifacts/stage2/deepfake_news_pairs_v2/dev_raw.jsonl",
+      "records": 200,
+      "per_cell": 50,
+      "cell_counts": {
+        "authentic_mismatched": 50,
+        "tampered_consistent": 50,
+        "authentic_consistent": 50,
+        "tampered_mismatched": 50
+      },
+      "unique_target_images": 100,
+      "mismatch_score_min": 3,
+      "mismatch_score_mean": 5.88,
+      "mismatch_score_histogram": {
+        "('mismatch_score', 3)": 2,
+        "('mismatch_score', 4)": 18,
+        "('mismatch_score', 5)": 22,
+        "('mismatch_score', 6)": 24,
+        "('mismatch_score', 7)": 21,
+        "('mismatch_score', 8)": 8,
+        "('mismatch_score', 9)": 5
+      },
+      "mismatch_fallback_counts": {}
+    },
+    "final": {
+      "raw_path": "artifacts/stage2/deepfake_news_pairs_v2/final_raw.jsonl",
+      "records": 400,
+      "per_cell": 100,
+      "cell_counts": {
+        "tampered_consistent": 100,
+        "authentic_mismatched": 100,
+        "tampered_mismatched": 100,
+        "authentic_consistent": 100
+      },
+      "unique_target_images": 200,
+      "mismatch_score_min": 4,
+      "mismatch_score_mean": 6.5,
+      "mismatch_score_histogram": {
+        "('mismatch_score', 4)": 10,
+        "('mismatch_score', 5)": 58,
+        "('mismatch_score', 6)": 39,
+        "('mismatch_score', 7)": 43,
+        "('mismatch_score', 8)": 29,
+        "('mismatch_score', 9)": 9,
+        "('mismatch_score', 10)": 11,
+        "('mismatch_score', 12)": 1
+      },
+      "mismatch_fallback_counts": {}
+    }
+  }
+}

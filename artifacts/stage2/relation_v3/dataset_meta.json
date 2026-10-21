@@ -1,0 +1,105 @@
+{
+  "source": "stage2_deepfake_news_pairs_v2",
+  "v2_root": "artifacts/stage2/deepfake_news_pairs_v2",
+  "output_root": "artifacts/stage2/relation_v3",
+  "seed": 20260719,
+  "label_set": [
+    "contradicts",
+    "insufficient",
+    "supports",
+    "unrelated"
+  ],
+  "aggregation_rule": [
+    "any unrelated -> unrelated",
+    "else any contradicts -> contradicts",
+    "else only not_verifiable/insufficient -> insufficient",
+    "else all verifiable supported -> supports"
+  ],
+  "splits": [
+    {
+      "split": "train",
+      "input": "artifacts/stage2/deepfake_news_pairs_v2/train_raw.jsonl",
+      "output": "artifacts/stage2/relation_v3/train_raw.jsonl",
+      "stats": {
+        "('case_type', 'easy_v2_contradicts')": 400,
+        "('case_type', 'easy_v2_supports')": 400,
+        "('case_type', 'event_context_mismatch')": 100,
+        "('case_type', 'near_person_mismatch')": 100,
+        "('case_type', 'non_visual_claim')": 400,
+        "('case_type', 'ocr_count_spatial')": 300,
+        "('case_type', 'positive_paraphrase')": 200,
+        "('case_type', 'single_attribute_counterfactual')": 100,
+        "('case_type', 'unrelated_pair')": 400,
+        "('difficulty', 'easy')": 800,
+        "('difficulty', 'hard')": 1200,
+        "('difficulty', 'medium')": 400,
+        "('image_verdict', 'authentic')": 1200,
+        "('image_verdict', 'tampered')": 1200,
+        "('overall_relation', 'contradicts')": 800,
+        "('overall_relation', 'insufficient')": 400,
+        "('overall_relation', 'supports')": 800,
+        "('overall_relation', 'unrelated')": 400,
+        "counterfactual_pairs": 100,
+        "total": 2400
+      }
+    },
+    {
+      "split": "dev",
+      "input": "artifacts/stage2/deepfake_news_pairs_v2/dev_raw.jsonl",
+      "output": "artifacts/stage2/relation_v3/dev_raw.jsonl",
+      "stats": {
+        "('case_type', 'easy_v2_contradicts')": 100,
+        "('case_type', 'easy_v2_supports')": 100,
+        "('case_type', 'event_context_mismatch')": 25,
+        "('case_type', 'near_person_mismatch')": 25,
+        "('case_type', 'non_visual_claim')": 100,
+        "('case_type', 'ocr_count_spatial')": 75,
+        "('case_type', 'positive_paraphrase')": 50,
+        "('case_type', 'single_attribute_counterfactual')": 25,
+        "('case_type', 'unrelated_pair')": 100,
+        "('difficulty', 'easy')": 200,
+        "('difficulty', 'hard')": 300,
+        "('difficulty', 'medium')": 100,
+        "('image_verdict', 'authentic')": 300,
+        "('image_verdict', 'tampered')": 300,
+        "('overall_relation', 'contradicts')": 200,
+        "('overall_relation', 'insufficient')": 100,
+        "('overall_relation', 'supports')": 200,
+        "('overall_relation', 'unrelated')": 100,
+        "counterfactual_pairs": 25,
+        "total": 600
+      }
+    },
+    {
+      "split": "final",
+      "input": "artifacts/stage2/deepfake_news_pairs_v2/final_raw.jsonl",
+      "output": "artifacts/stage2/relation_v3/final_raw.jsonl",
+      "stats": {
+        "('case_type', 'easy_v2_contradicts')": 200,
+        "('case_type', 'easy_v2_supports')": 200,
+        "('case_type', 'event_context_mismatch')": 50,
+        "('case_type', 'near_person_mismatch')": 50,
+        "('case_type', 'non_visual_claim')": 200,
+        "('case_type', 'ocr_count_spatial')": 150,
+        "('case_type', 'positive_paraphrase')": 100,
+        "('case_type', 'single_attribute_counterfactual')": 50,
+        "('case_type', 'unrelated_pair')": 200,
+        "('difficulty', 'easy')": 400,
+        "('difficulty', 'hard')": 600,
+        "('difficulty', 'medium')": 200,
+        "('image_verdict', 'authentic')": 600,
+        "('image_verdict', 'tampered')": 600,
+        "('overall_relation', 'contradicts')": 400,
+        "('overall_relation', 'insufficient')": 200,
+        "('overall_relation', 'supports')": 400,
+        "('overall_relation', 'unrelated')": 200,
+        "counterfactual_pairs": 50,
+        "total": 1200
+      }
+    }
+  ],
+  "cross_split": {
+    "group_count": 700,
+    "overlap_count": 0
+  }
+}
